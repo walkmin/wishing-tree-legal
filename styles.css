@@ -1,0 +1,57 @@
+:root {
+  color-scheme: dark;
+  --ink: #f7e8c9;
+  --muted: #c7b796;
+  --gold: #d4ad67;
+  --line: rgba(212, 173, 103, .32);
+  --panel: rgba(23, 25, 31, .88);
+  --deep: #11131a;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--deep); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(111, 79, 37, .30), transparent 52%),
+    linear-gradient(180deg, #151923 0%, #11131a 70%);
+  font: 16px/1.75 "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+}
+a { color: #f0cb83; text-underline-offset: 4px; }
+a:hover { color: #ffe4a9; }
+.page-shell { width: min(900px, calc(100% - 36px)); margin: 0 auto; padding: 54px 0 32px; }
+.brand, .legal-heading { text-align: center; }
+.ornament { color: var(--gold); letter-spacing: .35em; font-size: 14px; }
+.eyebrow { color: var(--gold); letter-spacing: .32em; font: 600 11px/1.5 Arial, sans-serif; }
+h1 { margin: 8px 0 0; color: #f3d89a; font-size: clamp(38px, 7vw, 64px); line-height: 1.2; text-shadow: 0 2px 18px rgba(212, 173, 103, .2); }
+.english-name { margin: 4px 0; color: #f5e4bd; font: 500 21px/1.5 Georgia, serif; letter-spacing: .12em; }
+.tagline { margin: 14px 0 0; color: #ead5a9; font-size: 18px; }
+.english-tagline { margin: 0; color: var(--muted); font: 14px/1.6 Georgia, serif; letter-spacing: .025em; }
+.notice, .content-card { border: 1px solid var(--line); border-radius: 16px; background: var(--panel); box-shadow: 0 20px 50px rgba(0,0,0,.24); }
+.notice { display: flex; gap: 15px; align-items: flex-start; margin: 38px 0 18px; padding: 20px 23px; }
+.status-mark { flex: 0 0 10px; height: 10px; margin-top: 9px; border-radius: 50%; background: #dfbd77; box-shadow: 0 0 12px rgba(223,189,119,.5); }
+h2 { margin: 0 0 8px; color: #f2d99f; font-size: 20px; }
+.notice p, .content-card p { margin: 5px 0 12px; color: #e2d8c6; }
+.content-card { padding: 25px 28px; }
+.policy-links { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+.policy-links a { display: flex; justify-content: space-between; gap: 10px; padding: 16px 19px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: rgba(43, 35, 27, .65); text-decoration: none; }
+.policy-links a span { color: var(--muted); font: 13px/1.8 Georgia, serif; }
+footer { margin-top: 30px; color: #a99d84; text-align: center; font: 13px/1.8 Arial, sans-serif; }
+footer p { margin: 3px 0; }
+.copyright { opacity: .72; }
+.legal-page { max-width: 860px; }
+.back-link { display: inline-block; margin-bottom: 28px; color: var(--muted); text-decoration: none; }
+.legal-heading { margin: 0 0 25px; }
+.legal-heading h1 { font-size: clamp(34px, 6vw, 48px); }
+.legal-heading p:last-child { color: var(--muted); font: 14px/1.6 Arial, sans-serif; }
+.legal-copy h2 { margin: 23px 0 5px; font-size: 19px; }
+.legal-copy h2:first-child { margin-top: 0; }
+.legal-copy p { margin: 0 0 12px; }
+@media (max-width: 620px) {
+  .page-shell { width: min(100% - 24px, 900px); padding-top: 34px; }
+  .notice, .content-card { padding: 18px; }
+  .policy-links { grid-template-columns: 1fr; }
+  .policy-links a { align-items: baseline; }
+}
